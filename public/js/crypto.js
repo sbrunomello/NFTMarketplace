@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         alert('O metamask não está instalado!')
     }
 
-    const contractAddress = '0x716BF274546E1C8576662525ac518A1F75a5C472'
+    const contractAddress = '0x4cdd80dAED8645A414B6E84D250Bd43d43c976ED'
     const contractABI = [
         {
             "inputs": [
@@ -86,7 +86,13 @@ document.addEventListener("DOMContentLoaded", async function() {
                 }
             ],
             "name": "createNFT",
-            "outputs": [],
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
             "stateMutability": "nonpayable",
             "type": "function"
         },
@@ -461,22 +467,22 @@ document.addEventListener("DOMContentLoaded", async function() {
                 },
                 {
                     "internalType": "uint8",
-                    "name": "tier",
+                    "name": "_tier",
                     "type": "uint8"
                 },
                 {
                     "internalType": "string",
-                    "name": "itemName",
+                    "name": "_name",
                     "type": "string"
                 },
                 {
                     "internalType": "string",
-                    "name": "itemType",
+                    "name": "_type",
                     "type": "string"
                 },
                 {
                     "internalType": "string",
-                    "name": "imageURL",
+                    "name": "_imageURL",
                     "type": "string"
                 }
             ],
@@ -502,60 +508,6 @@ document.addEventListener("DOMContentLoaded", async function() {
                     "internalType": "bool",
                     "name": "",
                     "type": "bool"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "name": "itemAttributes",
-            "outputs": [
-                {
-                    "internalType": "address",
-                    "name": "owner",
-                    "type": "address"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "price",
-                    "type": "uint256"
-                },
-                {
-                    "internalType": "bool",
-                    "name": "isForSale",
-                    "type": "bool"
-                },
-                {
-                    "internalType": "uint8",
-                    "name": "tier",
-                    "type": "uint8"
-                },
-                {
-                    "internalType": "string",
-                    "name": "itemName",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "itemType",
-                    "type": "string"
-                },
-                {
-                    "internalType": "string",
-                    "name": "imageURL",
-                    "type": "string"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "tokenId",
-                    "type": "uint256"
                 }
             ],
             "stateMutability": "view",
