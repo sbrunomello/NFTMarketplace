@@ -1,13 +1,87 @@
-<html>
-
+</html>
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+    <script src="/js/crypto.js"></script>
 <head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Marketplace (TESTNET)</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
-</body>
+    <h1>Marketplace NFT</h1>
+    <button id="connectMetamaskButton">Conectar Metamask</button>
+    <h2>Criar NFT</h2>
+    <form id="createNFTForm">
+        <label for="name">Nome: </label>
+        <input type="text" id="name" name="name" required>
 
+        <label for="price">Preço: </label>
+        <input type="number" id="price" name="price" required>
+
+        <label for="type">Tipo do Item: </label>
+        <select name="type" id="type">
+          <!-- As opções serão preenchidas pelo JavaScript -->
+        </select>
+
+        <button type="submit">Criar NFT</button>
+    </form>
+
+    <h2>Definir NFT para venda</h2>
+    <form id="setNFTForSaleForm">
+        <label for="tokenIdForSale">Token ID: </label>
+        <input type="number" name="tokenIdForSale" id="tokenIdForSale" required>
+
+        <label for="isForSale">Á venda:</label>
+        <select name="isForSale" id="isForSale">
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+        </select>
+
+        <button type="submit">Definir para venda</button>
+    </form>
+
+    <h2>Comprar NFT</h2>
+    <form id="buyNFTForm">
+        <label for="tokenIdToBuy">Token ID: </label>
+        <input type="number" id="tokenIdToBuy" name="tokenIdToBuy" required>
+        
+        <label for="price">Preço: </label>
+        <input type="number" id="priceBuy" name="price" required>
+
+        <button type="submit">Comprar NFT</button>
+    </form>
+
+    <h2>Obter informações do NFT</h2>
+    <form id="getNFTForm">
+        <label for="tokenIdToGet">Token ID: </label>
+        <input type="number" id="tokenIdToGet" name="tokenIdToGet" required>
+
+        <button type="submit">Obter Informações</button>
+    </form>
+
+    <h2>Resultado</h2>
+    <div id="result">
+      <label for="nftPrice">NFT Preço: </label>
+        <input type="number" id="nftPrice" name="nftPrice" disabled>
+
+      <label for="nftName">NFT Nome: </label>
+        <input type="text" id="nftName" name="nftName" disabled>
+
+      <label for="nftType">Tipo: </label>
+        <input type="text" id="nftType" name="nftType" disabled>
+
+      <label for="itemImg">Item: </label>
+        <a href=""><img id="itemImg" alt="itemImg"></a>
+
+      <label for="tier">NIVEL: </label>
+        <input type="number" id="tier" name="tier" disabled>
+
+      <label for="selling">Á Venda: </label>
+        <input type="checkbox" id="selling" name="selling" disabled>
+    </div>
+
+    
+</body>
 </html>
